@@ -1,11 +1,20 @@
 import { provideEditingConfig } from 'scrivito'
 import { HeadlineWidget } from './HeadlineWidgetClass'
 import Thumbnail from './thumbnail.svg'
+import { text } from 'stream/consumers'
 
 provideEditingConfig(HeadlineWidget, {
   title: 'Headline',
   thumbnail: Thumbnail,
   attributes: {
+    bgColor: {
+      title: 'Background color',
+      description: 'Default: Transparent',
+    },
+    textColor: {
+      title: 'Text color',
+      description: 'Default: Dark',
+    },
     style: {
       title: 'Style',
       description: 'Default: Heading 2',
@@ -56,8 +65,10 @@ provideEditingConfig(HeadlineWidget, {
     },
     uppercase: { title: 'Uppercase?', description: 'Default: No' },
   },
-  properties: ['style', 'level', 'alignment', 'margin', 'uppercase'],
+  properties: ['textColor', 'bgColor', 'style', 'level', 'alignment', 'margin', 'uppercase'],
   initialContent: {
+    textColor: 'dark',
+    bgColor: 'primary',
     alignment: 'left',
     headline: 'Headline',
     margin: 'mb-2',

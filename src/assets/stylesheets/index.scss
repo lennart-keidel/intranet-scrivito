@@ -11,6 +11,7 @@
  ================================================== */
 
 @import 'contrast';
+@import '_SectionWidget.scss';
 
 :root {
   --light-grey: #f2f3f7;
@@ -296,6 +297,71 @@ fieldset:disabled .btn {
 
 .btn-outline-secondary {
   --btn-color: var(--bs-secondary);
+}
+
+.btn-font-color-primary {
+  color: var(--bs-primary) !important;
+}
+
+.btn-font-color-secondary {
+  color: var(--bs-secondary) !important;
+}
+
+.btn-font-color-black {
+  color: #000 !important;
+}
+
+.btn-font-color-white {
+  color: #fff !important;
+}
+
+.btn-border-color-primary {
+  border-color: var(--bs-primary) !important;
+}
+
+.btn-border-color-secondary {
+  border-color: var(--bs-secondary) !important;
+}
+
+.btn-border-color-black {
+  border-color: #000 !important;
+}
+
+.btn-border-color-white {
+  border-color: #fff !important;
+}
+
+.btn-background-color-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+.btn-background-color-secondary {
+  background-color: var(--bs-secondary) !important;
+}
+
+
+.btn-background-color-black {
+  background-color: #000 !important;
+}
+
+.btn-background-color-white {
+  background-color: #fff !important;
+}
+
+.text-list-item-primary-color li::marker {
+  color: var(--bs-primary) !important;
+}
+
+.text-list-item-secondary-color li::marker {
+  color: var(--bs-secondary) !important;
+}
+
+.text-list-item-black-color li::marker {
+  color: #000 !important;
+}
+
+.text-list-item-white-color li::marker {
+  color: #fff !important;
 }
 
 .btn i:only-child {
@@ -1288,7 +1354,7 @@ section:focus >,
 }
 .dropdown-item.active,
 .dropdown-item:active {
-  color: var(--bs-dropdown-link-active-color) !important;
+  color: var(--bs-secondary) !important;
 }
 section.bg-primary {
   .dropdown-item.active,

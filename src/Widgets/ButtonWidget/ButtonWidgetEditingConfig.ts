@@ -26,6 +26,36 @@ provideEditingConfig(ButtonWidget, {
         { value: 'btn-outline-secondary', title: 'Secondary outline color' },
       ],
     },
+    buttonFontColor: {
+      title: 'Button font color',
+      description: 'Default: Primary font color',
+      values: [
+        { value: 'btn-font-color-primary', title: 'Primary font color' },
+        { value: 'btn-font-color-secondary', title: 'Secondary font color' },
+        { value: 'btn-font-color-white', title: 'White font color' },
+        { value: 'btn-font-color-black', title: 'Black font color' },
+      ],
+    },
+    buttonBorderColor: {
+      title: 'Button border color',
+      description: 'Default: Primary border color',
+      values: [
+        { value: 'btn-border-color-primary', title: 'Primary border color' },
+        { value: 'btn-border-color-secondary', title: 'Secondary border color' },
+        { value: 'btn-border-color-white', title: 'White border color' },
+        { value: 'btn-border-color-black', title: 'Black border color' },
+      ],
+    },
+    buttonBackgroundColor: {
+      title: 'Button background color',
+      description: 'Default: White background color',
+      values: [
+        { value: 'btn-background-color-primary', title: 'Primary background color' },
+        { value: 'btn-background-color-secondary', title: 'Secondary background color' },
+        { value: 'btn-background-color-white', title: 'White background color' },
+        { value: 'btn-background-color-black', title: 'Black background color' },
+      ],
+    },
     buttonSize: {
       title: 'Button size',
       description: 'Default: medium',
@@ -35,10 +65,13 @@ provideEditingConfig(ButtonWidget, {
       description: 'The target and text of the button.',
     },
   },
-  properties: ['target', 'alignment', 'buttonColor', 'buttonSize'],
+  properties: ['target', 'alignment', 'buttonColor', 'buttonFontColor', 'buttonBorderColor', 'buttonBackgroundColor', 'buttonSize'],
   initialContent: {
     alignment: 'left',
     buttonColor: 'btn-primary',
+    buttonFontColor: 'btn-font-color-primary',
+    buttonBorderColor: 'btn-border-color-primary',
+    buttonBackgroundColor: 'btn-background-color-white',
     buttonSize: 'medium',
   },
   validations: [

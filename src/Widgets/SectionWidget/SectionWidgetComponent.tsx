@@ -22,6 +22,24 @@ provideComponent(SectionWidget, ({ widget }) => {
     contentClassName = ''
   }
 
+  const roundedCorners = widget.get('roundedCorners');
+
+  if (roundedCorners) {
+    sectionClassNames.push(`${roundedCorners}`);
+  }
+
+  const borderColor = widget.get('borderColor');
+
+  if (borderColor) {
+    sectionClassNames.push(`border-${borderColor}`);
+  }
+
+  const borderWidth = widget.get('borderWidth');
+
+  if (borderWidth) {
+    sectionClassNames.push(`border border-${borderWidth}`);
+  }
+
   return (
     <WidgetTag
       tag="section"

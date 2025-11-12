@@ -22,6 +22,18 @@ provideComponent(HeadlineWidget, ({ widget }) => {
 
   classNames.push(widget.get('margin') ?? 'mb-2')
 
+  const bgColor = widget.get('bgColor');
+
+  if (bgColor) {
+    classNames.push(`bg-${bgColor}`);
+  }
+
+  const textColor = widget.get('textColor');
+
+  if (textColor) {
+    classNames.push(`text-${textColor}`);
+  }
+
   return (
     <ContentTag
       content={widget}

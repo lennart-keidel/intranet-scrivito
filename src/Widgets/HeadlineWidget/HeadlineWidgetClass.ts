@@ -4,6 +4,14 @@ export const HeadlineWidget = provideWidgetClass('HeadlineWidget', {
   attributes: {
     alignment: ['enum', { values: ['left', 'center', 'right'] }],
     headline: 'string',
+    bgColor: [
+      'enum',
+      { values: ['transparent', 'primary', 'secondary', 'dark'] },
+    ],
+    textColor: [
+      'enum',
+      { values: ['light', 'dark', 'primary', 'secondary', 'muted'] },
+    ],
     level: ['enum', { values: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div'] }],
     margin: [
       'enum',

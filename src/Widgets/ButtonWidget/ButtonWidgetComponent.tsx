@@ -15,6 +15,9 @@ provideComponent(ButtonWidget, ({ widget }) => {
 
   const buttonClassNames = ['btn']
   buttonClassNames.push(widget.get('buttonColor') || 'btn-primary')
+  buttonClassNames.push(widget.get('buttonFontColor') || 'btn-font-color-primary')
+  buttonClassNames.push(widget.get('buttonBorderColor') || 'btn-border-color-primary')
+  buttonClassNames.push(widget.get('buttonBackgroundColor') || 'btn-background-color-white')
 
   const buttonSize = buttonSizeClassName(widget.get('buttonSize'))
   if (buttonSize) buttonClassNames.push(buttonSize)
