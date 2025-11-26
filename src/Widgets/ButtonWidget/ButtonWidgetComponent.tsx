@@ -14,10 +14,10 @@ provideComponent(ButtonWidget, ({ widget }) => {
   const title = ensureString(target?.title())
 
   const buttonClassNames = ['btn']
-  buttonClassNames.push(widget.get('buttonColor') || 'btn-primary')
   buttonClassNames.push(widget.get('buttonFontColor') || 'btn-font-color-primary')
   buttonClassNames.push(widget.get('buttonBorderColor') || 'btn-border-color-primary')
   buttonClassNames.push(widget.get('buttonBackgroundColor') || 'btn-background-color-white')
+  buttonClassNames.push(widget.get('buttonBackgroundColorHover') || 'btn-background-color-white-hover')
 
   const buttonSize = buttonSizeClassName(widget.get('buttonSize'))
   if (buttonSize) buttonClassNames.push(buttonSize)

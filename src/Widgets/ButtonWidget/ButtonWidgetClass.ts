@@ -3,17 +3,6 @@ import { provideWidgetClass } from 'scrivito'
 export const ButtonWidget = provideWidgetClass('ButtonWidget', {
   attributes: {
     alignment: ['enum', { values: ['left', 'center', 'right', 'block'] }],
-    buttonColor: [
-      'enum',
-      {
-        values: [
-          'btn-primary',
-          'btn-secondary',
-          'btn-outline-primary',
-          'btn-outline-secondary',
-        ],
-      },
-    ],
     buttonFontColor: [
       'enum',
       {
@@ -44,6 +33,19 @@ export const ButtonWidget = provideWidgetClass('ButtonWidget', {
           'btn-background-color-secondary',
           'btn-background-color-white',
           'btn-background-color-black',
+          'btn-background-color-transparent',
+        ],
+      },
+    ],
+    buttonBackgroundColorHover: [
+      'enum',
+      {
+        values: [
+          'btn-background-color-primary-hover',
+          'btn-background-color-secondary-hover',
+          'btn-background-color-white-hover',
+          'btn-background-color-black-hover',
+          'btn-background-color-transparent-hover',
         ],
       },
     ],

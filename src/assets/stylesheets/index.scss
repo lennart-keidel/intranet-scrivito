@@ -12,6 +12,7 @@
 
 @import 'contrast';
 @import '_SectionWidget.scss';
+@import '_ButtonWidget.scss';
 
 :root {
   --light-grey: #f2f3f7;
@@ -79,7 +80,7 @@
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
 
-  --bs-body-font-family: 'Manrope';
+  --bs-body-font-family: 'Arial';
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 500;
   --bs-body-line-height: 1.75;
@@ -106,7 +107,7 @@
 
   --bs-border-radius: 8.5px;
   --jr-box-shadow: 0 0.375rem 1.5rem 0 rgba(140, 152, 164, 0.25);
-  --jr-headline-font-family: 'Firava';
+  --jr-headline-font-family: 'Arial';
   --jr-headline-font-weight: 500;
 
   hyphens: auto;
@@ -289,63 +290,6 @@ fieldset:disabled .btn {
         var(--light-text-color)
       )} !important;
   }
-}
-
-.btn-outline-primary {
-  --btn-color: var(--bs-primary);
-}
-
-.btn-outline-secondary {
-  --btn-color: var(--bs-secondary);
-}
-
-.btn-font-color-primary {
-  color: var(--bs-primary) !important;
-}
-
-.btn-font-color-secondary {
-  color: var(--bs-secondary) !important;
-}
-
-.btn-font-color-black {
-  color: #000 !important;
-}
-
-.btn-font-color-white {
-  color: #fff !important;
-}
-
-.btn-border-color-primary {
-  border-color: var(--bs-primary) !important;
-}
-
-.btn-border-color-secondary {
-  border-color: var(--bs-secondary) !important;
-}
-
-.btn-border-color-black {
-  border-color: #000 !important;
-}
-
-.btn-border-color-white {
-  border-color: #fff !important;
-}
-
-.btn-background-color-primary {
-  background-color: var(--bs-primary) !important;
-}
-
-.btn-background-color-secondary {
-  background-color: var(--bs-secondary) !important;
-}
-
-
-.btn-background-color-black {
-  background-color: #000 !important;
-}
-
-.btn-background-color-white {
-  background-color: #fff !important;
 }
 
 .text-list-item-primary-color li::marker {

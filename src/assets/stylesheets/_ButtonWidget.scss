@@ -1,0 +1,88 @@
+.btn-outline-primary {
+  --btn-color: var(--bs-primary);
+}
+
+.btn-outline-secondary {
+  --btn-color: var(--bs-secondary);
+}
+
+// Button Font Colors
+
+.btn-font-color-primary {
+  color: var(--bs-primary) !important;
+}
+
+.btn-font-color-secondary {
+  color: var(--bs-secondary) !important;
+}
+
+.btn-font-color-black {
+  color: #000 !important;
+}
+
+.btn-font-color-white {
+  color: #fff !important;
+}
+
+
+// Button Border Colors
+
+.btn-border-color-primary {
+  border-color: var(--bs-primary) !important;
+}
+
+.btn-border-color-secondary {
+  border-color: var(--bs-secondary) !important;
+}
+
+.btn-border-color-black {
+  border-color: #000 !important;
+}
+
+.btn-border-color-white {
+  border-color: #fff !important;
+}
+
+.btn-background-color-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+.btn-background-color-secondary {
+  background-color: var(--bs-secondary) !important;
+}
+
+.btn-background-color-black {
+  background-color: #000 !important;
+}
+
+.btn-background-color-white {
+  background-color: #fff !important;
+}
+
+
+// Button Background Colors on Hover
+
+.btn-background-color-primary-hover:hover {
+  background-color: var(--bs-primary) !important;
+  color: #fff !important;
+}
+
+.btn-background-color-secondary-hover:hover {
+  background-color: var(--bs-secondary) !important;
+  color: #fff !important;
+}
+
+.btn-background-color-black-hover:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.btn-background-color-white-hover:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.btn-background-color-transparent-hover:hover {
+  background-color: transparent !important;
+  color: #000 !important;
+}
