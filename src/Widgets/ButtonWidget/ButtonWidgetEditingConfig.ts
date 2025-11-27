@@ -1,6 +1,7 @@
-import { provideEditingConfig, Link } from 'scrivito'
+import { provideEditingConfig, Link, Widget } from 'scrivito'
 import { ButtonWidget } from './ButtonWidgetClass'
 import Thumbnail from './thumbnail.svg'
+import { ScrivitoBootstrapIconEditor } from 'scrivito-icon-editor'
 
 provideEditingConfig(ButtonWidget, {
   title: 'Button',
@@ -62,12 +63,20 @@ provideEditingConfig(ButtonWidget, {
       title: 'Button size',
       description: 'Default: medium',
     },
+    withFile: {
+      title: "Attached File?",
+      description: "Download file after click.",
+      values: [
+        { value: "yes", title: "Yes" },
+        { value: "no", title: "No" },
+      ],
+    },
     target: {
       title: 'Target',
       description: 'The target and text of the button.',
     },
   },
-  properties: ['target', 'alignment', 'buttonColor', 'buttonFontColor', 'buttonBorderColor', 'buttonBackgroundColor', 'buttonBackgroundColorHover', 'buttonSize'],
+  properties: ['target', 'alignment', 'buttonColor', 'buttonFontColor', 'buttonBorderColor', 'buttonBackgroundColor', 'buttonBackgroundColorHover', 'buttonSize', "withFile"],
   initialContent: {
     alignment: 'left',
     buttonColor: 'btn-primary',
@@ -76,6 +85,7 @@ provideEditingConfig(ButtonWidget, {
     buttonBackgroundColor: 'btn-background-color-white',
     buttonBackgroundColorHover: 'btn-background-color-white-hover',
     buttonSize: 'medium',
+    withFile: "no",
   },
   validations: [
     [
@@ -96,5 +106,21 @@ provideEditingConfig(ButtonWidget, {
         }
       },
     ],
+    // [
+    //   "downloadButtonIcon",
+    //   (downloadButtonIcon, { widget }) => {
+    //     if (widget.get("withFile") === "yes") {
+    //       const homepage = getDefaultRoot();
+
+    //       if (!downloadButtonIcon && !homepage?.get("downloadButtonIcon")) {
+    //         return {
+    //           message:
+    //             "No icon is set in neither homepage's properties nor widget's properties. Lack of icon can break design!",
+    //           severity: "warning",
+    //         };
+    //       }
+    //     }
+    //   },
+    // ],
   ],
 })

@@ -7,12 +7,12 @@ provideEditingConfig(TickListItemWidget, {
   thumbnail,
   validations: [
     [
-      'statement',
+      'heading',
 
-      (statement) => {
-        if (!statement) {
+      (heading) => {
+        if (!heading) {
           return {
-            message: 'The statement should be set.',
+            message: 'The heading should be set.',
             severity: 'warning',
           }
         }

@@ -122,6 +122,11 @@
   background-image: if($enable-gradients, linear-gradient(270deg, rgba($black, .25), rgba($black, .001)), null);
 }
 
+.hide-prev-icon .carousel-control-prev-icon,
+.hide-next-icon .carousel-control-next-icon {
+  display: none !important;
+}
+
 // Icons for within
 .carousel-control-prev-icon,
 .carousel-control-next-icon {

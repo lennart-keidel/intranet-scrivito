@@ -1,3 +1,33 @@
+.btn > .download-icon {
+  display: none;
+}
+
+.btn {
+  &.hasFile {
+    padding-left: 3.2rem;
+    text-align: left;
+
+    @media (max-width: 991px) {
+      padding-left: 3 * 20px;
+    }
+
+    > .download-icon {
+      display: inline;
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      top: 0.6em;
+      transform: translateY(-50%);
+      left: 1rem;
+      z-index: 20;
+
+      @media (max-width: 991px) {
+        left: 20px;
+      }
+    }
+  }
+}
+
 .btn-outline-primary {
   --btn-color: var(--bs-primary);
 }

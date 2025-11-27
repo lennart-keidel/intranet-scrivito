@@ -13,10 +13,18 @@ provideComponent(SliderWidget, ({ widget }) => {
   const showControls = autoplay ? widget.get('controls') : true
   const intervalMs = Math.round((widget.get('autoplayInterval') ?? 5) * 1000)
   const togglePlayPauseRef = useRef<TogglePlayPauseRef>(null)
+  const hidePrevIcon = widget.get('hidePrevIcon')
+  const hideNextIcon = widget.get('hideNextIcon')
+  const controlColor = widget.get('controlColor')
 
   return (
     <Carousel
-      className={`slider-widget ${widget.get('margin') || 'mb-4'}`}
+      className={[
+        `slider-widget ${widget.get('margin') || 'mb-4'}`,
+        hidePrevIcon ? 'hide-prev-icon' : '',
+        hideNextIcon ? 'hide-next-icon' : '',
+        controlColor || 'control-color-black',
+      ].join(' ')}
       controls={showControls}
       indicators={showControls}
       interval={autoplay ? intervalMs : null}
@@ -29,10 +37,10 @@ provideComponent(SliderWidget, ({ widget }) => {
         .map((item) => (
           <Carousel.Item
             key={item.id()}
-            style={{ minHeight: `${widget.get('minHeight') || 400}px` }}
+            style={{ minHeight: `${widget.get('minHeight') || 400}px`, maxHeight: `${widget.get('maxHeight') || 800}px` }}
             className={[
               `bg-${item.get('backgroundColor') || 'transparent'}`,
-              showControls ? 'has-controls' : '',
+              showControls ? 'has-controls' : ''
             ].join(' ')}
             onClick={(e) => togglePlayPauseRef.current?.togglePlayPause(e)}
           >

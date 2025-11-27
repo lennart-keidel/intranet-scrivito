@@ -1,13 +1,33 @@
 .tick-list-widget {
   margin-bottom: 0.7rem;
 
+  &.color-primary .icon.bi {
+    color: var(--bs-primary);
+  }
+  &.color-secondary .icon.bi {
+    color: var(--bs-secondary);
+  }
+  &.color-black .icon.bi {
+    color: #000;
+  }
+  &.color-white .icon.bi {
+    color: #fff;
+  }
+  &.color-dark-gray .icon.bi {
+    color: #707070;
+  }
+  &.color-light-gray .icon.bi{
+    color: #e9ecef;
+  }
+
   li {
     display: flex;
-    align-items: center;
+    align-items: top;
 
     .icon.bi {
       margin-right: 0.5rem;
-      padding: 0.3rem 0;
+      padding: 0.6rem 0;
+      color: var(--bs-primary);
     }
   }
 }

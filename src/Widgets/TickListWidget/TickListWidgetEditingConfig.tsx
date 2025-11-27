@@ -7,18 +7,34 @@ import { TickListWidget } from './TickListWidgetClass'
 provideEditingConfig(TickListWidget, {
   title: 'Tick List',
   thumbnail,
+  attributes: {
+    iconColor: {
+      title: 'Icon Color',
+      description: 'Default: Primary color',
+      values: [
+        { value: 'color-primary', title: 'Primary' },
+        { value: 'color-secondary', title: 'Secondary' },
+        { value: 'color-dark-gray', title: 'Dark Gray' },
+        { value: 'color-light-gray', title: 'Light Gray' },
+        { value: 'color-black', title: 'Black' },
+        { value: 'color-white', title: 'White' },
+      ],
+    },
+  },
   propertiesGroups: [
     {
       title: 'Icon',
       component: (props: { widget: Widget }) => (
         <ScrivitoBootstrapIconEditor defaultValue="check" {...props} />
       ),
-      properties: ['icon'],
+      properties: ['icon', 'iconColor'],
       key: 'icon-group',
     },
   ],
+  properties: ['iconColor'],
   initialContent: {
     icon: 'bi-check',
+    iconColor: 'color-primary',
     items: [
       new TickListItemWidget({}),
       new TickListItemWidget({}),

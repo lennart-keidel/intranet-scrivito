@@ -3,7 +3,8 @@ import { provideWidgetClass } from 'scrivito'
 export const TickListItemWidget = provideWidgetClass('TickListItemWidget', {
   onlyInside: 'TickListWidget',
   attributes: {
-    statement: 'string',
+    heading: 'string',
+    text: 'string',
   },
-  extractTextAttributes: ['statement'],
+  extractTextAttributes: ['heading', 'text'],
 })

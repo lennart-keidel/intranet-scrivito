@@ -28,11 +28,35 @@ provideEditingConfig(SliderWidget, {
       description:
         'Maintains consistent slide appearance when content varies in height. Default: 400',
     },
+    maxHeight: {
+      title: 'Maximum height (in px)',
+      description:
+        'Maintains consistent slide appearance when content varies in height. Default: 800',
+    },
+    hidePrevIcon: {
+      title: 'Hide the previous slide arrow?',
+      description:
+        'Hides the left arrow for navigating to the previous slide. Default: No',
+    },
+    hideNextIcon: {
+      title: 'Hide the next slide arrow?',
+      description:
+        'Hides the right arrow for navigating to the next slide. Default: No',
+    },
+    controlColor: {
+      title: 'Set Color of control icons?',
+      description:
+        'Sets the color of the previous/next arrows and indicators. Default: Black',
+      values: [
+        { value: 'control-color-black', title: 'Black' },
+        { value: 'control-color-white', title: 'White' },
+      ],
+    },
     slides: {
       title: 'Slides',
     },
   },
-  properties: ['slides', 'minHeight'],
+  properties: ['slides', 'minHeight', 'maxHeight', 'hidePrevIcon', 'hideNextIcon', 'controlColor'],
   propertiesGroups: (widget) => [
     {
       title: 'Autoplay',
@@ -54,6 +78,9 @@ provideEditingConfig(SliderWidget, {
     controls: true,
     margin: 'mb-4',
     minHeight: 400,
+    maxHeight: 800,
+    hidePrevIcon: false,
+    hideNextIcon: false,
     slides: [new SlideWidget({}), new SlideWidget({})],
   },
 })

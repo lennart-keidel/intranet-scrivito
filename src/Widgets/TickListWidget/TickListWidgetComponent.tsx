@@ -9,7 +9,7 @@ provideComponent(TickListWidget, ({ widget }) => (
   <TickListIconContext value={widget.get('icon') || 'bi-check'}>
     <ContentTag
       tag="ul"
-      className="tick-list-widget list-unstyled"
+      className={"tick-list-widget list-unstyled " + widget.get('iconColor') || 'color-primary'}
       content={widget}
       attribute="items"
     />

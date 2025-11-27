@@ -50,6 +50,7 @@ export const ButtonWidget = provideWidgetClass('ButtonWidget', {
       },
     ],
     buttonSize: ['enum', { values: ['small', 'medium', 'large'] }],
+    withFile: ["enum", { values: ["yes", "no"] }],
     target: 'link',
   },
 })

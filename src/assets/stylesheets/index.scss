@@ -1298,6 +1298,7 @@ section:focus >,
 }
 .dropdown-item.active,
 .dropdown-item:active {
+  background: var(--middle-grey) !important;
   color: var(--bs-secondary) !important;
 }
 section.bg-primary {
