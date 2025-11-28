@@ -8,7 +8,6 @@ import { alignmentClassNameWithBlock } from '../../utils/alignmentClassName'
 import { ButtonWidget } from './ButtonWidgetClass'
 import { ensureString } from '../../utils/ensureString'
 import { buttonSizeClassName } from '../../utils/buttonSizeClassName'
-import getIcon from '../../utils/getIcon'
 
 provideComponent(ButtonWidget, ({ widget }) => {
   const target = widget.get('target')

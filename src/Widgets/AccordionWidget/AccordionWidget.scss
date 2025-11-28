@@ -1,0 +1,104 @@
+$tertiary: #e9e8e9;
+$widget-lr-padding-sm: 20px;
+$widget-lr-padding-md: 40px;
+$widget-lr-padding-lg: 40px;
+$column-padding-sm: 20px;
+$column-padding-md: 40px;
+$column-padding-lg: 0;
+$screen-xs-min: 480px;
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-sm-max: 991px;
+$screen-md-min: 992px;
+$screen-md-max: 1199px;
+$screen-lg-min: 1200px;
+$screen-xl-min: 1440px;
+$screen-xxl-min: 1600px;
+$screen-max: 1921px;
+
+
+.accordion-widget {
+  border-top: 1.5px solid $tertiary;
+  padding-top: 1.5px;
+}
+
+.Accordion {
+  p {
+    margin-bottom: 15px;
+  }
+
+  section {
+    width: initial !important;
+    left: 0 !important;
+  }
+
+  .text-left {
+    .btn {
+      text-align: left !important;
+    }
+  }
+
+  &.card {
+    border: 0;
+    background: #fff;
+  }
+  .card-header {
+    background-color: #fff;
+    border-bottom: 1.5px solid $tertiary;
+    padding: 0;
+    width: 100%;
+
+    &.open {
+      border-bottom: 1.5px solid transparent;
+      background: #fff;
+    }
+
+    .btn {
+      padding: 10px $widget-lr-padding-md;
+      @media (max-width: $screen-sm-max) {
+        padding: 10px 45px 10px $widget-lr-padding-sm;
+      }
+      margin: 0;
+      width: 100%;
+
+      // @include fluid-type(992px, 1920px, 19px, 22px);
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: var(--bs-primary);
+        text-decoration: none;
+      }
+      .accordion-header {
+        text-align: left;
+        padding-right: 20px;
+      }
+    }
+  }
+
+  .card-body {
+    border-bottom: 1.5px solid $tertiary;
+    transition: all 0.3s;
+    padding: 0 $widget-lr-padding-md $widget-lr-padding-md $widget-lr-padding-md;
+    @media (max-width: $screen-sm-max) {
+      padding: 0 $widget-lr-padding-sm $widget-lr-padding-sm
+        $widget-lr-padding-sm;
+    }
+  }
+
+  &--icon {
+    color: var(--bs-primary) !important;
+    position: absolute;
+    right: 25px;
+    transition: all 0.3s;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 35px !important;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .open & {
+      transform: rotate(180deg) translateY(50%);
+    }
+  }
+}
