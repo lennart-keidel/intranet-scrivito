@@ -58,38 +58,40 @@ export const LanguageSwitch = connect(function LanguageSwitch({
   )
   if (!currentVersion) return null
 
+  // empty, cause we don't need this for now
   return (
-    <InPlaceEditingOff>
-      <Dropdown className="nav-item">
-        <Dropdown.Toggle
-          active={false}
-          aria-label={currentVersion.label}
-          as={NavLink}
-          eventKey={null}
-          lang={currentVersion.language}
-        >
-          <LanguageLabel
-            label={currentVersion.label}
-            root={currentVersion.root}
-          />
-        </Dropdown.Toggle>
-        <Dropdown.Menu align={align}>
-          {versions.map(({ version, root, label, language }) => (
-            <Dropdown.Item
-              key={root.id()}
-              active={root.language() === currentVersion.language}
-              aria-label={label}
-              as={LinkTag}
-              lang={language}
-              params={currentPageParams()}
-              to={version || root}
-            >
-              <LanguageLabel label={label} root={root} showTextLabel />
-            </Dropdown.Item>
-          ))}
-        </Dropdown.Menu>
-      </Dropdown>
-    </InPlaceEditingOff>
+    ""
+    // <InPlaceEditingOff>
+    //   <Dropdown className="nav-item">
+    //     <Dropdown.Toggle
+    //       active={false}
+    //       aria-label={currentVersion.label}
+    //       as={NavLink}
+    //       eventKey={null}
+    //       lang={currentVersion.language}
+    //     >
+    //       <LanguageLabel
+    //         label={currentVersion.label}
+    //         root={currentVersion.root}
+    //       />
+    //     </Dropdown.Toggle>
+    //     <Dropdown.Menu align={align}>
+    //       {versions.map(({ version, root, label, language }) => (
+    //         <Dropdown.Item
+    //           key={root.id()}
+    //           active={root.language() === currentVersion.language}
+    //           aria-label={label}
+    //           as={LinkTag}
+    //           lang={language}
+    //           params={currentPageParams()}
+    //           to={version || root}
+    //         >
+    //           <LanguageLabel label={label} root={root} showTextLabel />
+    //         </Dropdown.Item>
+    //       ))}
+    //     </Dropdown.Menu>
+    //   </Dropdown>
+    // </InPlaceEditingOff>
   )
 })
 
@@ -102,16 +104,19 @@ const LanguageLabel = connect(function LanguageLabel({
   root: HomepageInstance
   showTextLabel?: boolean
 }) {
+  
+  // empty, cause we don't need this for now
   return (
-    <>
-      <ImageTag
-        alt=""
-        content={root}
-        attribute="siteLanguageIcon"
-        className="img-flag"
-      />
-      {showTextLabel ? <span className="text-capitalize">{label}</span> : null}
-    </>
+    ""
+    // <>
+    //   <ImageTag
+    //     alt=""
+    //     content={root}
+    //     attribute="siteLanguageIcon"
+    //     className="img-flag"
+    //   />
+    //   {showTextLabel ? <span className="text-capitalize">{label}</span> : null}
+    // </>
   )
 })
 

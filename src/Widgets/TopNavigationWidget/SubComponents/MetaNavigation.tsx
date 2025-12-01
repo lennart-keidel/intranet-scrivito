@@ -20,41 +20,43 @@ export const MetaNavigation = connect(function MetaNavigation({
   const showCart = !!siteCartPage && containsItems()
   const itemsCount = showCart && numberOfCartItems()
 
+  // empty, cause we don't need this for now
   return (
-    <div className="navbar-meta">
-      <Nav className="me-auto">
-        {widget.get('metaNavigationObjs').map((metaObj, index) => (
-          <NavItem
-            obj={metaObj}
-            eventKey={`${metaObj.id()}${index}`}
-            key={`${metaObj.id()}${index}`}
-          />
-        ))}
-      </Nav>
+    ""
+    // <div className="navbar-meta">
+    //   <Nav className="me-auto">
+    //     {widget.get('metaNavigationObjs').map((metaObj, index) => (
+    //       <NavItem
+    //         obj={metaObj}
+    //         eventKey={`${metaObj.id()}${index}`}
+    //         key={`${metaObj.id()}${index}`}
+    //       />
+    //     ))}
+    //   </Nav>
 
-      <Nav className="ms-auto border-left">
-        <LanguageSwitch align="start" />
-        {showCart && (
-          <Nav.Item>
-            <Nav.Link
-              as={LinkTag}
-              eventKey={`MetaNavigation-${siteCartPage.id()}`}
-              key={`MetaNavigation-${siteCartPage.id()}`}
-              to={siteCartPage}
-            >
-              <ObjIconAndTitle obj={siteCartPage} />{' '}
-              {itemsCount && (
-                <span className="badge rounded-pill bg-secondary">
-                  {itemsCount}
-                </span>
-              )}
-            </Nav.Link>
-          </Nav.Item>
-        )}
-        <UtilityLink target={widget.get('metaNavigationUtilityLink')} />
-        <CurrentUserDropdown widget={widget} root={root} />
-      </Nav>
-    </div>
+    //   <Nav className="ms-auto border-left">
+    //     <LanguageSwitch align="start" />
+    //     {showCart && (
+    //       <Nav.Item>
+    //         <Nav.Link
+    //           as={LinkTag}
+    //           eventKey={`MetaNavigation-${siteCartPage.id()}`}
+    //           key={`MetaNavigation-${siteCartPage.id()}`}
+    //           to={siteCartPage}
+    //         >
+    //           <ObjIconAndTitle obj={siteCartPage} />{' '}
+    //           {itemsCount && (
+    //             <span className="badge rounded-pill bg-secondary">
+    //               {itemsCount}
+    //             </span>
+    //           )}
+    //         </Nav.Link>
+    //       </Nav.Item>
+    //     )}
+    //     <UtilityLink target={widget.get('metaNavigationUtilityLink')} />
+    //     <CurrentUserDropdown widget={widget} root={root} />
+    //   </Nav>
+    // </div>
   )
 })
 

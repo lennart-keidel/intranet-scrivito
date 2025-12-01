@@ -30,47 +30,49 @@ export const CurrentUserDropdown = connect(function CurrentUserDropdown({
   const siteUserProfilePage = root.get('siteUserProfilePage')
   const showUserProfileLink = !!siteUserProfilePage
 
+  // empty, cause we don't need a dropdown for now
   return (
-    <NavDropdown
-      title={
-        <>
-          <ProfileImg />
-          <span className="nav-link-extended">
-            <ContentTag
-              content={widget}
-              attribute="metaNavigationUserTitle"
-              tag="span"
-            />
+    ""
+    // <NavDropdown
+    //   title={
+    //     <>
+    //       <ProfileImg />
+    //       <span className="nav-link-extended">
+    //         <ContentTag
+    //           content={widget}
+    //           attribute="metaNavigationUserTitle"
+    //           tag="span"
+    //         />
 
-            <ContentTag
-              content={widget}
-              attribute="metaNavigationUserDescription"
-              tag="span"
-              className="text-meta"
-            />
-          </span>
-        </>
-      }
-    >
-      {showUserProfileLink ? (
-        <>
-          <NavDropdown.Item
-            active={isCurrentPage(siteUserProfilePage)}
-            as={LinkTag}
-            eventKey={`MetaNavigation-${siteUserProfilePage.id()}`}
-            key={`MetaNavigation-${siteUserProfilePage.id()}`}
-            to={siteUserProfilePage}
-          >
-            <ObjIconAndTitle obj={siteUserProfilePage} />
-          </NavDropdown.Item>
-          <li>
-            <hr className="dropdown-divider" />
-          </li>
-        </>
-      ) : null}
+    //         <ContentTag
+    //           content={widget}
+    //           attribute="metaNavigationUserDescription"
+    //           tag="span"
+    //           className="text-meta"
+    //         />
+    //       </span>
+    //     </>
+    //   }
+    // >
+    //   {showUserProfileLink ? (
+    //     <>
+    //       <NavDropdown.Item
+    //         active={isCurrentPage(siteUserProfilePage)}
+    //         as={LinkTag}
+    //         eventKey={`MetaNavigation-${siteUserProfilePage.id()}`}
+    //         key={`MetaNavigation-${siteUserProfilePage.id()}`}
+    //         to={siteUserProfilePage}
+    //       >
+    //         <ObjIconAndTitle obj={siteUserProfilePage} />
+    //       </NavDropdown.Item>
+    //       <li>
+    //         <hr className="dropdown-divider" />
+    //       </li>
+    //     </>
+    //   ) : null}
 
-      <LogOutButton root={root} />
-    </NavDropdown>
+    //   <LogOutButton root={root} />
+    // </NavDropdown>
   )
 })
 
@@ -81,42 +83,47 @@ const LogOutButton = connect(function LogOutButton({
 }) {
   // TODO: Remove workaround, once #10276 is available
   if (isEditorLoggedIn()) {
+
+    // empty, cause we don't need a logout for now
     return (
-      <OverlayTrigger
-        placement="left"
-        overlay={
-          <Tooltip>
-            Logging out from an app inside the Scrivito UI is currently not
-            possible.
-          </Tooltip>
-        }
-      >
-        <div>
-          <NavDropdown.Item
-            eventKey="MetaNavigation-LogOut"
-            key="MetaNavigation-LogOut"
-            disabled
-            style={{ color: 'rgba(0, 0, 0, 0.5)' }}
-          >
-            <i className="bi bi-box-arrow-right"></i>
-            {localizeLogOutLabel()}
-          </NavDropdown.Item>
-        </div>
-      </OverlayTrigger>
+      ""
+      // <OverlayTrigger
+      //   placement="left"
+      //   overlay={
+      //     <Tooltip>
+      //       Logging out from an app inside the Scrivito UI is currently not
+      //       possible.
+      //     </Tooltip>
+      //   }
+      // >
+      //   <div>
+      //     <NavDropdown.Item
+      //       eventKey="MetaNavigation-LogOut"
+      //       key="MetaNavigation-LogOut"
+      //       disabled
+      //       style={{ color: 'rgba(0, 0, 0, 0.5)' }}
+      //     >
+      //       <i className="bi bi-box-arrow-right"></i>
+      //       {localizeLogOutLabel()}
+      //     </NavDropdown.Item>
+      //   </div>
+      // </OverlayTrigger>
     )
   }
 
   const rootUrl = urlFor(root)
 
+  // empty, cause we don't need a logout for now
   return (
-    <NavDropdown.Item
-      eventKey="MetaNavigation-LogOut"
-      key="MetaNavigation-LogOut"
-      onClick={() => logout(rootUrl)}
-    >
-      <i className="bi bi-box-arrow-right"></i>
-      {localizeLogOutLabel()}
-    </NavDropdown.Item>
+    ""
+    // <NavDropdown.Item
+    //   eventKey="MetaNavigation-LogOut"
+    //   key="MetaNavigation-LogOut"
+    //   onClick={() => logout(rootUrl)}
+    // >
+    //   <i className="bi bi-box-arrow-right"></i>
+    //   {localizeLogOutLabel()}
+    // </NavDropdown.Item>
   )
 })
 
@@ -124,10 +131,12 @@ const ProfileImg = connect(
   function ProfileImg() {
     const picture = ensureString(CurrentUser.get('picture')) || personCircle
 
+    // empty, cause we don't need a profileimg for now
     return (
-      <>
-        <img className="profile-img" src={picture} alt="" />{' '}
-      </>
+      ""
+      // <>
+      //   <img className="profile-img" src={picture} alt="" />{' '}
+      // </>
     )
   },
   { loading: Loading },
