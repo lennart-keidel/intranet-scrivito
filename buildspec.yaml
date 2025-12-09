@@ -4,11 +4,12 @@ phases:
   install:
     runtime-versions:
       nodejs: 22
+  pre_build:
     commands:
       - npm ci
   build:
     commands:
-      - npm run build
+      - npm run prerender
 artifacts:
   files:
-    - "**/*"
+    - "dist/*"
