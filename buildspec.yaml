@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+    commands:
+      - node ci
+  build:
+    commands:
+      - npm run build
+artifacts:
+  files:
+    - "**/*"
